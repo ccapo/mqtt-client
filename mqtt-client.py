@@ -17,7 +17,7 @@ client.on_connect = on_connect
 client.on_message = on_message
 client.enable_logger()
 
-client.connect("3.82.153.249", 1883, 60)
+client.connect("localhost", 1883, 60)
 
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
