@@ -57,3 +57,8 @@ tcp6       0      0 :::22                   :::*                    LISTEN
   * Port: `22`
   * Source: `<user_public_ipv4>`
 - Use same security group for all clients
+
+## Sample Pub Command
+```
+mosquitto_pub -h 192.168.1.30 -t /cmd/scan/5829835c-4773-44e1-90c1-33fd583328ef/060ab0cc-2873-43c8-a191-21455d1d0145 -m "Hello World!"
+```
