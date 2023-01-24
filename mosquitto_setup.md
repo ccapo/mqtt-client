@@ -23,6 +23,7 @@ sudo systemctl restart mosquitto
 
 4. Confirm listening on port 1883
 ```
+sudo apt-get install net-tools
 netstat -lntu
 ```
 Sample output:
@@ -46,7 +47,7 @@ tcp6       0      0 :::22                   :::*                    LISTEN
     * Type: `HTTP`
     * Port: `80`
     * Source: `<client_public_ipv4>`
-- Add inbound rule from laptop/desktop
+- Add inbound rule from laptop
   * Type: `SSH`
   * Port: `22`
   * Source: `<user_public_ipv4>`
@@ -61,4 +62,5 @@ tcp6       0      0 :::22                   :::*                    LISTEN
 ## Sample Pub Command
 ```
 mosquitto_pub -h 192.168.1.30 -t /cmd/scan/5829835c-4773-44e1-90c1-33fd583328ef/060ab0cc-2873-43c8-a191-21455d1d0145 -m "Hello World!"
+mosquitto_pub -h 35.90.99.231 -t /cmd/scan/5829835c-4773-44e1-90c1-33fd583328ef/060ab0cc-2873-43c8-a191-21455d1d0145 -m "Hello World!"
 ```
